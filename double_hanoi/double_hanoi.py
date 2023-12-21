@@ -10,14 +10,15 @@ def solution(list_of_disks, leftIncreasingValues, rightDecreasingValues):
     return len(left) + len(right) - 2
 
 def evaluate_info(disk, aList, isLower=True):
-    if disk not in aList:
-        if should_evaluated(aList, disk, isLower):
-            analyse_data(disk, aList, isLower)
+    if should_evaluated(aList, disk, isLower):
+        return analyse_data(disk, aList, isLower)
     return aList
 
 def should_evaluated(aList, disk, isLower=True):
-    evaluation_field = max(aList) if isLower else min(aList)
-    return disk < evaluation_field if isLower else disk > evaluation_field
+    if disk not in aList:
+        evaluation_field = max(aList) if isLower else min(aList)
+        return disk < evaluation_field if isLower else disk > evaluation_field
+    return False
 
 def analyse_data(disk, aList, isLower=True):
     for idx, val in enumerate(aList):
@@ -26,6 +27,7 @@ def analyse_data(disk, aList, isLower=True):
         if isLower:
             evaluate_and_add(disk, idx, aList, next_val, val)
         evaluate_and_add(disk, idx, aList, val, next_val)
+    return aList
 
 def obtain_next_val(disk, aList, next_idx, isLower=True):
     default = (disk - 1) if isLower else (disk + 1)
