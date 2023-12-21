@@ -1,12 +1,12 @@
 import pytest
 
-from double_hanoi import solution, check_is_lower, check_is_higher
+from double_hanoi import solution, evaluate_info
 
 test_data = [
+    ([1, 5, 5], 2, 4, 2),
     ([5, 2, 5, 2], 8, 1, 4),
     ([1, 4, 5, 5], 6, 4, 4),
     ([2, 3, 3, 4], 3, 1, 3),
-
 ]
 
 params = "list_of_disks, leftIncreasing, rightDecreasing, expected"
@@ -15,26 +15,19 @@ params = "list_of_disks, leftIncreasing, rightDecreasing, expected"
 def test_solution(list_of_disks, leftIncreasing, rightDecreasing, expected):
     assert solution(list_of_disks, leftIncreasing, rightDecreasing) == expected
 
-test_data2 = [
-    ([4, 2], 3, [4, 3, 2]),
-    ([3, 2], 1, [3, 2, 1]),
-    ([3, 2, 1], 1, [3, 2, 1]),
-]
-
-params2 = "aList, value, expected"
-
-@pytest.mark.parametrize(params2, test_data2)
-def test_check_is_lower(aList, value, expected):
-    result = check_is_lower(value, aList)
-    assert result == expected
+params2 = "aList, value, isLower,  expected"
 
 test_data3 = [
-    ([4, 7], 6, [4, 6, 7]),
-    ([3, 4], 5, [3, 4, 5]),
-    ([5, 6, 7], 7, [5, 6, 7]),
+    ([4, 2], 3, True, [4, 3, 2]),
+    ([3, 2], 1, True, [3, 2, 1]),
+    ([3, 2, 1], 1, True, [3, 2, 1]),
+    ([4, 7], 6, False, [4, 6, 7]),
+    ([3, 4], 5, False, [3, 4, 5]),
+    ([5, 6, 7], 7, False, [5, 6, 7]),
 ]
 
 @pytest.mark.parametrize(params2, test_data3)
-def test_check_is_higher(aList, value, expected):
-    result = check_is_higher(value, aList)
+def test_evaluate_info(aList, value, isLower, expected):
+    result = evaluate_info(value, aList, isLower)
     assert result == expected
+
