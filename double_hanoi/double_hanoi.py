@@ -22,8 +22,7 @@ def should_evaluated(aList, disk, isLower=True):
 
 def analyse_data(disk, aList, isLower=True):
     for idx, val in enumerate(aList):
-        next_idx = idx + 1
-        next_val = obtain_next_val(disk, aList, next_idx, isLower)
+        next_val = obtain_next_val(disk, aList, idx + 1, isLower)
         if isLower:
             evaluate_and_add(disk, idx, aList, next_val, val)
         evaluate_and_add(disk, idx, aList, val, next_val)

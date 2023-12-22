@@ -26,11 +26,7 @@ Examples:
 
 3. Given A = [5, 2, 5, 2], L = 8 and R = 1, your function should return 4.
 
-"Graphical representation of second solution to example 3."
-
 4. Given A = [1, 5, 5], L = 2 and R = 4, your function should return 2.
-
-"Graphical representation of second solution to example 4."
 
 Write an efficient algorithm for the following assumptions:
 

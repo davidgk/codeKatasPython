@@ -3,8 +3,30 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[[source]]
+url = "https://david.kotlirevsky@climate.com:AKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bin.tcc.li/artifactory/api/pypi/pypi/simple"
+verify_ssl = true
+name = "davidkotlirevsky@climatecomAKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bintcc"
+
+[[source]]
+url = "https://david.kotlirevsky@climate.com:AKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bin.tcc.li/artifactory/api/pypi/pypi/simple"
+verify_ssl = true
+name = "davidkotlirevsky@climatecomAKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bintcc"
+
+[[source]]
+url = "https://david.kotlirevsky@climate.com:AKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bin.tcc.li/artifactory/api/pypi/pypi/simple"
+verify_ssl = true
+name = "davidkotlirevsky@climatecomAKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bintcc"
+
+[[source]]
+url = "https://david.kotlirevsky@climate.com:AKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bin.tcc.li/artifactory/api/pypi/pypi/simple"
+verify_ssl = true
+name = "davidkotlirevsky@climatecomAKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bintcc"
+
 [packages]
 pytest = "*"
+coverage = {version = "*", index = "davidkotlirevsky@climatecomAKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bintcc"}
+pytest-cov = {version = "*", index = "davidkotlirevsky@climatecomAKCp8nz2XXN2z8okaxLgJmavFdPADZMq1QKNxBoKYXWH4fgS4obveXBu55dLogBor2G9fjnV2@bintcc"}
 
 [dev-packages]
 
