@@ -48,3 +48,4 @@ def evaluate_and_add(disk, idx, aList, maximum_val, minimum_val):
 
 
 
+
