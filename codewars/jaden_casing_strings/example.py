@@ -6,7 +6,7 @@ def make_upper_case(acum,  value):
 
 def solution(a):
     initial = str(a).strip()
-    return "" if len(initial) == 0 else reduce(make_upper_case, initial.split(" "), "")
+    return reduce(make_upper_case, initial.split(" "), "")
 
 
 # Another interesting approach from codewars
