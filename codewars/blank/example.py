@@ -1,3 +1,3 @@
-def add_values(a, b):
+def solution(a, b):
     return a + b
 
