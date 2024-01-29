@@ -3,13 +3,14 @@ import pytest
 from codewars.jaden_casing_strings.example import solution
 
 test_data =[
-    (1, 1, 2),
-    (3, 3, 6),
-    (3, 4, 7),
+    ("how", "How"),
+    ("how are you", "How Are You"),
+    ("don't you know what I mean?", "Don't You Know What I Mean?"),
+
 ]
-params = "p1, p2, expected"
+params = "p1, expected"
 
 
 @pytest.mark.parametrize(params, test_data)
-def test_solution(p1, p2, expected):
-    assert solution(p1, p2) == expected
+def test_solution(p1, expected):
+    assert solution(p1) == expected
