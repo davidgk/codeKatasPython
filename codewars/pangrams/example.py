@@ -36,8 +36,6 @@ def is_pangram(s):
 def is_pangram2(s):
     return set(string.ascii_lowercase).issubset(s.lower())
 
-
-
 def is_pangram3(input_string):
     """Returns False if the input string is not a pangram else returns True"""
     return False if [char for char in string.ascii_lowercase if not char in input_string.lower()] else True
