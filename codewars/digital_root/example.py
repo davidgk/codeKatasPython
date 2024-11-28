@@ -24,9 +24,7 @@ def sum_digits(data):
     data["origin"] = str(data["result"])
 
 def digital_root(a_number):
-    if a_number == 0 or a_number is None:
-        return 0
-    return process(a_number) if a_number > 9 else a_number;
+    return 0 if a_number == 0 or a_number is None else process(a_number)
 
 def process(a_number):
     result = {"origin": str(a_number), "result": a_number}
