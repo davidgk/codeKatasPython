@@ -1,3 +1,3 @@
-def solution(a, b):
+def chords(a, b):
     return a + b
 
